@@ -4,7 +4,7 @@ services:
     container_name: portainer
     iamge: portainer/portainer-ce
     volumes:
-      - /var/run/docker.sock:/var/run/Docker.sock
+      - /var/run/docker.sock:/var/run/docker.sock
       - portainer_data:/data
     restart: always
     ports:
