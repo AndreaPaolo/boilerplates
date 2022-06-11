@@ -4,3 +4,5 @@
 Installazione di docker e docker-compose.
 
 "Echo ..." => [ Output dell'operazione ]
+
+## Assegnare indirizzo ip statico
