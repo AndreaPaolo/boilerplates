@@ -1,0 +1,22 @@
+version: "2.1"
+services:
+  heimdall:
+    image: lscr.io/linuxserver/heimdall:latest
+    container_name: heimdall
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - path/heimdall:/config
+    restart: unless-stopped
+    networks: 
+      - lan
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.heimdall.rule=Host(`domain`)"
+      - "traefik.http.routers.heimdall.entrypoints=web"
+      
+networks: 
+  lan:
+    external: true
