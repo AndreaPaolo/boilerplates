@@ -8,14 +8,15 @@ services:
       - PGID=1000
       - TZ=Europe/Rome
     volumes:
-      - path/heimdall:/config
+      - /path/heidmallConfig:/config
     restart: unless-stopped
     networks: 
       - lan
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.heimdall.rule=Host(`domain`)"
-      - "traefik.http.routers.heimdall.entrypoints=web"
+      - "traefik.http.routers.heimdall.rule=Host(`dominio`)"
+      - "traefik.http.routers.heimdall.entrypoints=web, websecure"
+      - "traefik.http.routers.heimdall.tls=true"
       
 networks: 
   lan:

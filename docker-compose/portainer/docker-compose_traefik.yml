@@ -10,7 +10,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.portainer.rule=Host('portainer.dominio')"
-      - "traefik.http.routers.portainer.entrypoints=web"
+      - "traefik.http.routers.api.entrypoints=web, websecure"
+      - "traefik.http.routers.api.tls=true"
       - "traefik.http.services.portainer.loadbalancer.server.port=9000"
     networks:
       - lan

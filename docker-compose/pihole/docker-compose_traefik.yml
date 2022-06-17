@@ -17,9 +17,10 @@ services:
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.pihole.rule=Host(`pihole.dominio`)"
+      - "traefik.http.routers.pihole.rule=Host(`dominio`)"
       - "traefik.http.services.pihole.loadbalancer.server.port=80"
-      - "traefik.http.routers.pihole.entrypoints=web"
+      - "traefik.http.routers.pihole.entrypoints=web, websecure"
+      - "traefik.http.routers.pihole.tls=true"
     networks: 
       - lan
       
