@@ -1,64 +1,38 @@
 global:
   checkNewVersion: true
-  sendAnonymousUsage: false  # true by default
+  sendAnonymousUsage: false
 
-# (Optional) Log information
-# ---
-# log:
-#  level: ERROR  # DEBUG, INFO, WARNING, ERROR, CRITICAL
-#   format: common  # common, json, logfmt
-#   filePath: /var/log/traefik/traefik.log
-
-# (Optional) Accesslog
-# ---
-# accesslog:
-  # format: common  # common, json, logfmt
-  # filePath: /var/log/traefik/access.log
-
-# (Optional) Enable API and Dashboard
-# ---
 api:
-  dashboard: true  # true by default
-  insecure: true  # Don't do this in production!
+  dashboard: true
+  insecure: true
 
-# Entry Points configuration
-# ---
 entryPoints:
   web:
     address: :80
-    # (Optional) Redirect to HTTPS
-    # ---
-    # http:
-    #   redirections:
-    #     entryPoint:
-    #       to: websecure
-    #       scheme: https
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
 
   websecure:
     address: :443
 
-# Configure your CertificateResolver here...
-# ---
-# certificatesResolvers:
-#   staging:
-#     acme:
-#       email: your-email@example.com
-#       storage: /etc/traefik/certs/acme.json
-#       caServer: "https://acme-staging-v02.api.letsencrypt.org/directory"
-#       httpChallenge:
-#         entryPoint: web
-#
-#   production:
-#     acme:
-#       email: your-email@example.com
-#       storage: /etc/traefik/certs/acme.json
-#       caServer: "https://acme-v02.api.letsencrypt.org/directory"
-#       httpChallenge:
-#         entryPoint: web
+tls:
+  certificates:
+    - certFile: "path/cert.crt"
+    - keyFile: "path/key.key"
+    stores:
+      -default
+  stores:
+    default:
+      defaultCertificate:
+        certFile: "path/key.key"
+        keyFile: "path/key.key"
 
 providers:
   docker:
-    exposedByDefault: false  # Default is true
+    exposedByDefault: false
   file:
     directory: /etc/traefik
     watch: true
