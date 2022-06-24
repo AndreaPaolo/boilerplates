@@ -1,0 +1,22 @@
+version: '3.1'
+services:
+  uptime-kuma:
+    image: louislam/uptime-kuma:1
+    container_name: uptime-kuma
+    volumes:
+      - /path/uptime-kuma/data:/app/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks: 
+      - lan
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.kuma.rule=Host(`dominio`)"
+      - "traefik.http.routers.kuma.entrypoints=web, websecure"
+      - "traefik.http.services.kuma.loadbalancer.server.port=3001"
+      - "traefik.http.routers.kuma.tls=true"
+      
+networks: 
+  lan:
+    external: true

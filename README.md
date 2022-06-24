@@ -23,8 +23,10 @@ Docker-compose:
 - [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
 - [Homebridge](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/homebridge)
 - [Vaultwarden](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/vaultwarden)
-- [Uptime kuma]()
+- [Uptime kuma](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/uptime-kuma)
 - [Nextcloud](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/nextcloud)
 - [Authelia](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/authelia)
+    - Configurazione utenti
+    - Configurazione generale
 - [Crowdsec]()
 - [Bouncer-Traefik]()
