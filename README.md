@@ -21,10 +21,10 @@ Docker-compose:
     - Local reverse proxy
     - HTTPS con certificato autofirmato
 - [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
-- [Homebridge]()
-- [Vaultwarden]()
+- [Homebridge](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/homebridge)
+- [Vaultwarden](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/vaultwarden)
 - [Uptime kuma]()
-- [Nextcloud]()
-- [Authelia]()
+- [Nextcloud](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/nextcloud)
+- [Authelia](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/authelia)
 - [Crowdsec]()
 - [Bouncer-Traefik]()

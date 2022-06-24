@@ -9,6 +9,9 @@ Redirect alla schermata di login
 - 'traefik.http.middlewares.authelia.forwardauth.trustForwardHeader=true'
 - 'traefik.http.middlewares.authelia.forwardauth.authResponseHeaders=Remote-User,Remote-Groups,Remote-Name,Remote-Email'
 
+###### Come inserirlo nelle configurazioni
+> "traefik.http.routers.servizio.middlewares=authelia@docker" 
+
 ###### File di configurazione
 - Il salvataggio degli utenti può avvenire su file o su database.
 - Notifiche tramite email (server smtp) o tramite file
