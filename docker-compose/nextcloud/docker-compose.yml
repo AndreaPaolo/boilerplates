@@ -1,0 +1,27 @@
+version: "2.1"
+services:
+  nextcloud:
+    image: nextcloud
+    container_name: nextcloud
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/Rome
+    volumes:
+      - nextcloud_data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextcloud.rule=Host(`dominio`)"
+      - "traefik.http.routers.nextcloud.entrypoints=web, websecure"
+      - "traefik.http.routers.nextcloud.tls=true"
+    restart: unless-stopped
+    networks: 
+      - lan
+      
+networks: 
+  lan:
+    external: true
+
+volumes:
+  nextcloud_data:
+    external: true

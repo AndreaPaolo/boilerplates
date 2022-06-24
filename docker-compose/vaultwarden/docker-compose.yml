@@ -1,0 +1,26 @@
+version: '3'
+services:
+  vaultwarden:
+    image: vaultwarden/server
+    restart: unless-stopped
+    container_name: vaultwarden
+    environment:
+      - SIGNUPS_ALLOWED=false
+    volumes:
+      - vaultwarden_data:/data
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.vaultwarden.rule=Host(`dominio`)"
+      - "traefik.http.services.vaultwarden.loadbalancer.server.port=80"
+      - "traefik.http.routers.vaultwarden.entrypoints=web, websecure"
+      - "traefik.http.routers.vaultwarden.tls=true"
+    networks: 
+      - lan
+      
+networks: 
+  lan:
+    external: true
+
+volumes:
+  vaultwarden_data:
+    external: true

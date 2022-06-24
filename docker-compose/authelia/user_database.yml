@@ -1,0 +1,15 @@
+---
+###############################################################
+#                         Users Database                      #
+###############################################################
+
+users:
+  authelia:
+    displayname: "authelia"
+    password: 
+    email: authelia
+    groups:
+      - admins
+      - dev
+
+...
