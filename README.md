@@ -12,12 +12,12 @@ Ubuntu:
 - Assegnare un indirizzo ip statico al PI
 
 Docker-compose:
-- Heidmall
-- PiHole
+- [Heidmall](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/heidmall)
+- [PiHole](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/pihole)
     - Server dns
     - Local dns resolver
-- Portainer
-- Traefik
+- [Portainer](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/portainer)
+- [Traefik](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/traefik)
     - Local reverse proxy
     - HTTPS con certificato autofirmato
-- Wireguard
+- [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
