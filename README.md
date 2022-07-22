@@ -22,6 +22,9 @@ Template di configurazione
     - configurazione hedgedoc
     - configurazione traefik
 - [Heidmall](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/heidmall)
+    - configurazione permessi
+    - configurazione del timezone
+    - configurazione traefik
 - [Homebridge](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/homebridge)
     - configurazione permessi
     - configurazione del timezone
