@@ -28,8 +28,6 @@ Docker-compose:
 - [Authelia](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/authelia)
     - Configurazione utenti
     - Configurazione generale
-- [Crowdsec]()
-- [Bouncer-Traefik]()
 - [Hedgedoc](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/hedgedoc)
     - configurazione database
     - configurazione permessi
