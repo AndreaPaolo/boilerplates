@@ -7,24 +7,11 @@ Template di configurazione
 
 ### Configurazioni:
 
-Ubuntu:
+### Ubuntu:
 - Installazione di docker e docker compose
 - Assegnare un indirizzo ip statico al PI
 
-Docker-compose:
-- [Heidmall](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/heidmall)
-- [PiHole](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/pihole)
-    - Server dns
-    - Local dns resolver
-- [Portainer](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/portainer)
-- [Traefik](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/traefik)
-    - Local reverse proxy
-    - HTTPS con certificato autofirmato
-- [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
-- [Homebridge](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/homebridge)
-- [Vaultwarden](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/vaultwarden)
-- [Uptime kuma](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/uptime-kuma)
-- [Nextcloud](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/nextcloud)
+### Docker-compose:
 - [Authelia](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/authelia)
     - Configurazione utenti
     - Configurazione generale
@@ -34,3 +21,25 @@ Docker-compose:
     - configurazione del timezone
     - configurazione hedgedoc
     - configurazione traefik
+- [Heidmall](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/heidmall)
+- [Homebridge](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/homebridge)
+    - configurazione permessi
+    - configurazione del timezone
+    - configurazione homebridge
+- [Nextcloud](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/nextcloud)
+    - configurazione permessi
+    - configurazione del timezone
+    - configurazione traefik
+- [PiHole](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/pihole)
+    - configurazione pihole
+        - configurazione delle porte
+        - configurazione del dns
+    - configurazione del timezone
+    - configurazione traefik
+- [Portainer](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/portainer)
+    - configurazione traefik
+
+- [Traefik](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/traefik)
+- [Uptime kuma](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/uptime-kuma)
+- [Vaultwarden](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/vaultwarden)
+- [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
