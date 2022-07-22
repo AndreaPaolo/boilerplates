@@ -1,9 +1,12 @@
 # Configurazione di vaultwarden
+
 Storage personale di password e note
 
-###### Volume
-- "vaultwarden_data" => Storage per password e dati
-
-###### Environment
->environment: SIGNUPS_ALLOWED=false
-> Blocca la registrazione di altri utenti
+### Parametri di configurazione
+- configurazione traefik
+    - "traefik.enable=true" (attiviamo traefik)
+    - "traefik.http.routers.vaultwarden.rule=Host(`vaultwarden.local`)" (impostiamo il dominio)
+    - "traefik.http.routers.vaultwarden.entrypoints=web, websecure" (impostiamo le porte di entrata 80 e 443)
+    - "traefik.http.routers.vaultwarden.tls=true" (attiviamo il certificato SSL)
+- environment:
+      - SIGNUPS_ALLOWED=false (Blocca la registrazione di altri utenti)
