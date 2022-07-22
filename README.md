@@ -30,4 +30,9 @@ Docker-compose:
     - Configurazione generale
 - [Crowdsec]()
 - [Bouncer-Traefik]()
-- [Hedgedoc]()
+- [Hedgedoc](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/hedgedoc)
+    - configurazione database
+    - configurazione permessi
+    - configurazione del timezone
+    - configurazione hedgedoc
+    - configurazione traefik
