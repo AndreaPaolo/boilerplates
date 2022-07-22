@@ -1,9 +1,11 @@
 # Configurazione di portainer
 
-## Configurazione con traefik
-Creazione di un container docker con portainer sotto il reverse proxy di traefik.
-Esponiamo entrambi i container nello stesso network, tramite un dns manager sarà accessibile all'indirizzo "portainer.dominio". Reindirizzamento automatico https
+Portainer come manager dei contenitori di docker
 
-###### Volumi
-- "/var/run/docker.sock" => Ci mettiamo in ascolto sul socket di docker così da avere sincronizzati tutti i container 
-- "portainer_data" => Storage dei dati di portainer
+### Parametri di configurazione
+- configurazione traefik
+    - "traefik.enable=true" (attiviamo traefik)
+    - "traefik.http.routers.portainer.rule=Host(`portainer.local`)" (impostiamo il dominio)
+      - "traefik.http.services.portainer.loadbalancer.server.port=9000" (impostiamo la porta)
+    - "traefik.http.routers.portainer.entrypoints=web, websecure" (impostiamo le porte di entrata 80 e 443)
+    - "traefik.http.routers.portainer.tls=true" (attiviamo il certificato SSL) 
