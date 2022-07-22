@@ -1,0 +1,34 @@
+version: "3"
+services:
+
+  hedgedoc:
+    image: lscr.io/linuxserver/hedgedoc:latest
+    container_name: hedgedoc
+    restart: always
+    volumes:
+      - /path:/config
+    networks: 
+      - lan
+    environment:
+      - DB_HOST=
+      - DB_USER=
+      - DB_PASS=
+      - DB_NAME=
+      - DB_PORT=
+      - PGID=1000
+      - PUID=1000
+      - TZ=Europe/Rome
+      - CMD_DOMAIN=hedgedoc.ubuntu.local
+      - CMD_URL_ADDPORT=false 
+      - CMD_PROTOCOL_USESSL=true 
+      - CMD_EMAIL=true 
+      - CMD_ALLOW_EMAIL_REGISTER=true
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hedgedoc.rule=Host(`hedgedoc.local`)"
+      - "traefik.http.routers.hedgedoc.entrypoints=web, websecure"
+      - "traefik.http.routers.hedgedoc.tls=true"
+
+networks:
+  lan:
+    external: true
