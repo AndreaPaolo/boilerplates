@@ -41,8 +41,16 @@ Template di configurazione
     - configurazione traefik
 - [Portainer](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/portainer)
     - configurazione traefik
-
 - [Traefik](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/traefik)
+    - configurazione traefik
 - [Uptime kuma](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/uptime-kuma)
+    - configurazione traefik
 - [Vaultwarden](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/vaultwarden)
+    - configurazione traefik
+    - environment
 - [Wireguard](https://github.com/AndreaPaolo/boilerplates/tree/main/docker-compose/wireguard)
+    - configurazione permessi
+    - configurazione del timezone
+    - configurazione vpn
+    - configurazione traefik
+    - Comandi per trovare il qrcode di configurazione
