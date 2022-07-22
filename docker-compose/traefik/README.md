@@ -1,13 +1,20 @@
 # Configurazione di traefik
 
-## Configurazione standard
-Creazione di un container docker con traefik come reverse proxy, accessibile all'indirizzo ip della macchina alla porta 8080
+### Parametri di configurazione
+- configurazione traefik
+    - "traefik.enable=true" (attiviamo traefik)
+    - "traefik.http.routers.api.rule=Host(`traefik.local`)" (impostiamo il dominio)
+    - "traefik.http.routers.api.service=api@internal"
+    - "traefik.http.routers.api.entrypoints=web, websecure" (impostiamo le porte di entrata 80 e 443)
+    - "traefik.http.routers.api.tls=true" (attiviamo il certificato SSL)
 
-## Volumi
-- "/path/traefik:/etc/traefik" => configurazione traefik
-- "/var/run/docker.sock:/var/run/docker.sock:ro" => gestione dei container 
+### Parametri configurazione traefik.yml
+- entryPoints (porta 80 e 443)
+  - web
+  - websecure
+- tls (certificato autofirmato)
 
-## Certificato autocertificato
+### Certificato autocertificato
 Lista dei comandi per creare un certificato
 
 > mkdir openssl && cd openssl
